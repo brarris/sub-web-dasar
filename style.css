@@ -1,0 +1,207 @@
+:root{
+  --primary: #22543d;
+  --background: #4b3828;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body{
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: white;
+  background-color: var(--background);
+  min-height: 3000px;
+}
+
+header {
+  display: inline;
+}
+
+footer{
+  padding: 20px;
+  color: white;
+  background-color: rgba(242, 232, 207, 0.5);;
+ 
+  text-align: center;
+  font-weight: bold;
+}
+
+.jumbotron{
+  padding: 60px;
+  font-family: 'Quicksand';
+  font-size: 20px;
+  text-shadow: 1px 1px 4px rgba(75, 56, 40, 0.5);
+  color: white;
+  background-image: url(img/headline.JPG);
+  text-align: center;
+  line-height: 1.25;
+  background-size: cover;
+}
+
+/* Navbar */
+.navbar{
+  background-color: var(--background);
+  padding: 5px 8%;
+  display: flex;
+  background-color: rgba(242, 232, 207, 0.5);
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  padding: 1.4rem 7%;
+}
+
+.navbar .navbar-logo {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: white;
+  font-style: italic;
+}
+
+.navbar ul{
+  padding-inline: 4rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.navbar ul li a:hover{
+  color: var(--primary);
+}
+
+.navbar ul li a:hover::after{
+  transform: scaleX(0.75);
+}
+
+.navbar ul li a::after{
+  transition: 0.3s linear;
+  padding-bottom: 0.5rem;
+  transform: scaleX(0);
+  content: '';
+  border-bottom: 0.05rem solid var(--primary);
+  display: block;
+}
+
+.navbar ul li a{
+  text-decoration: none;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+.navbar .navbar-logo span{
+  color: var(--primary);
+}
+/* Navbar */
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+ 
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.feature-image {
+  width: 100%;
+  max-height: 300px;
+ 
+  object-fit: cover;
+  object-position: center;
+}
+
+.profile header{
+  text-align: center;
+}
+
+.profile img{
+  max-width: 200px;
+}
+
+.profile table {
+  color: white;
+}
+
+#content {
+  flex: 5;
+ 
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem 2rem;
+}
+
+/* Menu */
+.story, .geografis, .menu{
+  padding: 8rem 7% 1.5rem;
+}
+
+.menu h2{
+  font-size: 2.6rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.menu p{
+  text-align: center;
+  max-width: 40rem;
+  margin: auto;
+  font-weight: 100;
+  line-height: 1.5;
+}
+
+.menu row{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+  justify-content: center;
+}
+
+.menu .row .menu-card{
+  text-align: center;
+}
+
+.menu .row .menu-card img{
+  margin-top: 3rem;
+  border-radius: 50%;
+  width: 50%;
+}
+
+aside{
+  flex-direction: 1;
+}
+
+main {
+  padding: 20px;
+ 
+  display: flex;
+  gap: 1.5rem;
+}
+
+/* Perangkat dengan lebar layar 1200px dan di bawahnya */
+@media screen and (max-width: 1200px) {
+  main {
+    flex-flow: column nowrap;
+  }
+ 
+  main aside {
+    align-self: center;
+  }
+}
+ 
+/* Perangkat dengan lebar layar 768px dan di bawahnya */
+@media screen and (max-width: 768px) {
+  nav ul {
+    justify-content: center;
+  }
+ 
+  main aside {
+    align-self: stretch;
+  }
+}
